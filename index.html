@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoAirdropHub</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+<header>
+    <button class="menu-btn" onclick="openNav()">&#9776; Menu</button>
+    <h1>CryptoAirdropHub</h1>
+    <p>Your Hub for Verified Airdrops and Crypto Discussions</p>
+</header>
+
+<!-- Side Navigation Menu -->
+<div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" data-link="home">Home</a>
+    <a href="#" data-link="airdrop-listings">Airdrop Listings</a>
+    <a href="#" data-link="verified-airdrops">Verified Airdrops</a>
+    <a href="#" data-link="discussion-forum">Discussion Forum</a>
+    <a href="#" data-link="about-us">About Us</a>
+</div>
+
+<div id="main">
+    <div class="content-section">
+        <button class="add-post-button" onclick="openModal()">+ Add Post</button>
+        <div class="content-image">
+            <img src="https://via.placeholder.com/800x400" alt="Crypto Discussion">
+        </div>
+
+        <div class="content-body">
+            <h2>Latest Airdrop Discussions</h2>
+            <p>Join the discussion about the latest airdrops in the crypto world. Share your insights, ask questions, and find out which airdrops are worth your time.</p>
+        </div>
+
+        <div class="discussion-buttons">
+            <a href="#" data-link="join-discussion" class="discussion-button">Join Discussion</a>
+        </div>
+
+        <div class="content-source">
+            <p>Last updated: <span id="lastUpdated">August 15, 2024</span></p>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Crypto</span>
+            <span class="tag">Airdrop</span>
+            <span class="tag">Discussion</span>
+        </div>
+    </div>
+
+    <div id="postsContainer">
+        <!-- Newly added posts will appear here -->
+    </div>
+
+    <!-- Modal for Adding Post -->
+    <div id="addPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add New Post</h2>
+            <form id="addPostForm">
+                <label for="postTitle">Title:</label>
+                <input type="text" id="postTitle" required>
+                
+                <label for="postDescription">Description:</label>
+                <textarea id="postDescription" required></textarea>
+                
+                <label for="postLink">Link:</label>
+                <input type="url" id="postLink" required>
+                
+                <label for="postTelegram">Telegram:</label>
+                <input type="text" id="postTelegram" required>
+                
+                <label for="postImage">Add Image:</label>
+                <input type="file" id="postImage" accept="image/*">
+
+                <button type="submit">Add Post</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
